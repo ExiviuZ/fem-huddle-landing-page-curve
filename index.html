@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Huddle landing page with curved sections</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="brand-container">
+          <img src="images/logo.svg" class="nav-logo" alt="brand logo" />
+        </div>
+        <button>Try it free</button>
+      </nav>
+
+      <section>
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>
+          <span
+            >Huddle re-imagines the way we build communities. You have a</span
+          >
+          <span>
+            voice, but so does your audience. Create connections with your</span
+          >
+          users as you engage in genuine discussion.
+        </p>
+        <button class="header-btn">Get Started For Free</button>
+        <img src="images/screen-mockups.svg" alt="screen mockups" />
+
+        <div class="stats">
+          <div class="first-stat">
+            <img src="images/icon-communities.svg" alt="" />
+            <span>1.4k+</span>
+            <p>Communities Formed</p>
+          </div>
+          <div class="second-stat">
+            <img src="images/icon-messages.svg" alt="" />
+            <span>2.7m+</span>
+            <p>Messages Sent</p>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="first-section">
+        <div class="main-wrapper">
+          <div class="section-info-wrapper">
+            <h2>Grow Together</h2>
+            <p>
+              Generate meaningful discussions with your audience and build a
+              strong, loyal community. Think of the insightful conversations you
+              miss out on with a feedback form.
+            </p>
+          </div>
+          <img
+            src="images/illustration-grow-together.svg"
+            alt="Grow Together Illustration"
+          />
+        </div>
+      </section>
+      <section class="second-section">
+        <div class="main-wrapper">
+          <img
+            src="images/illustration-flowing-conversation.svg"
+            alt="Flowing Conversation Illustration"
+          />
+          <div class="section-info-wrapper">
+            <h2>Flowing Conversations</h2>
+            <p>
+              You wouldn't paginate a conversation in real life, so why do it
+              online? Our threads have just-in-time loading for a more natural
+              flow.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="third-section">
+        <div class="main-wrapper">
+          <div class="section-info-wrapper">
+            <h2>Your Users</h2>
+            <p>
+              It takes no time at all to integrate Huddle with your app's
+              authentication solution. This means, once signed in to your app,
+              your users can start chatting immediately.
+            </p>
+          </div>
+          <img
+            src="images/illustration-your-users.svg"
+            alt="Illustration of users"
+          />
+        </div>
+      </section>
+      <section class="fourth-section">
+        <div class="main-wrapper">
+          <h2>Ready To Build Your Community?</h2>
+          <button class="fourth-section-btn">Get Started For Free</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-contacts">
+          <img src="images/logo.svg" class="footer-logo" alt="brand logo" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            nulla quam, hendrerit lacinia vestibulum a, ultrices quis sem.
+          </p>
+
+          <span class="phone-contact"
+            ><img
+              src="images/icon-phone.svg"
+              class="phone-icon"
+              alt="phone icon"
+            />
+            Phone: +1-543-123-4567</span
+          >
+
+          <span class="email-contact"
+            ><img
+              src="images/icon-email.svg"
+              class="email-icon"
+              alt="email icon"
+            />
+            example@huddle.com</span
+          >
+
+          <ul class="socials">
+            <li>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h2>Newsletter</h2>
+          <p>
+            To receive tips on how to grow your community, sign up to our weekly
+            newsletter. We’ll never send you spam or pass on your email address
+          </p>
+          <form action="#" class="form">
+            <div class="form-control">
+              <input
+                type="email"
+                class="email-input"
+                placeholder="email@example.com"
+              />
+              <span class="error-message">Please check your email</span>
+            </div>
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer> -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      const form = document.querySelector(".form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let errorSpan = form.querySelector(".error-message");
+        let emailInput = form.querySelector(".email-input");
+        let emailValue = emailInput.value.trim();
+
+        if (emailValue == "") {
+          errorSpan.innerText = "Email cannot be blank";
+          errorSpan.classList.add("error");
+          emailInput.classList.add("error");
+        } else if (
+          !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailValue)
+        ) {
+          errorSpan.innerText = "Please check your email";
+          errorSpan.classList.add("error");
+          emailInput.classList.add("error");
+        } else {
+          errorSpan.classList.remove("error");
+          emailInput.classList.remove("error");
+          errorSpan.classList.add("success");
+          emailInput.classList.add("success");
+        }
+      });
+    </script>
+  </body>
+</html>
