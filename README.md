@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Desktop Preview
 
-![](./screenshots/huddle-landing-desktop.jpeg)
+![](./screenshots/huddle-landing-mobile.jpeg)
 
 ### Mobile Preview
 
-![](./screenshots/huddle-landing-mobile.jpeg)
+![](./screenshots/huddle-landing-desktop.jpeg)
 
 ### Links
 
