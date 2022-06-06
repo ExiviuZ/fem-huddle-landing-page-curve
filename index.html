@@ -200,12 +200,16 @@
 
         if (emailValue == "") {
           errorSpan.innerText = "Email cannot be blank";
+          errorSpan.classList.remove("success");
+          emailInput.classList.remove("success");
           errorSpan.classList.add("error");
           emailInput.classList.add("error");
         } else if (
           !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailValue)
         ) {
           errorSpan.innerText = "Please check your email";
+          errorSpan.classList.remove("success");
+          emailInput.classList.remove("success");
           errorSpan.classList.add("error");
           emailInput.classList.add("error");
         } else {
